@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Casper Spirit Dimensions</title>
   <style>
-    /* Reset baseline spacing */
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     html, body {
@@ -14,36 +13,38 @@
       color: #fff;
     }
 
-    /* Center container */
     .page {
       min-height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 2vmin; /* small breathing room on tiny screens */
+      padding: 2vmin;
+      gap: 2vmin;
     }
 
-    /* Image scales to fit both width and height without distortion */
     .hero {
       display: block;
-      max-width: 96vw;
-      max-height: 96vh;
+      max-width: 72vw;  /* reduced size */
+      max-height: 72vh; /* reduced size */
       width: auto;
       height: auto;
-      image-rendering: auto;
     }
 
-    /* Optional: subtle focus outline for accessibility when image is focused */
-    .hero:focus {
-      outline: 2px solid #5bf;
-      outline-offset: 4px;
+    .logobar {
+      display: block;
+      max-width: 72vw;  /* same width ratio as hero for alignment */
+      width: 100%;
+      height: auto;
     }
   </style>
   <link rel="preload" as="image" href="index_main.png">
+  <link rel="preload" as="image" href="logobar.gif">
 </head>
 <body>
   <main class="page">
-    <img src="index_main.png" alt="Casper Spirit Dimensions promotional image" class="hero" tabindex="0">
+    <img src="index_main.png" alt="Casper Spirit Dimensions promotional image" class="hero">
+    <img src="logobar.gif" alt="Game platform and rating logos" class="logobar">
   </main>
 </body>
 </html>
