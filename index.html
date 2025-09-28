@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Casper Spirit Dimensions</title>
+  <style>
+    /* Reset baseline spacing */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      background: #000;
+      color: #fff;
+    }
+
+    /* Center container */
+    .page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2vmin; /* small breathing room on tiny screens */
+    }
+
+    /* Image scales to fit both width and height without distortion */
+    .hero {
+      display: block;
+      max-width: 96vw;
+      max-height: 96vh;
+      width: auto;
+      height: auto;
+      image-rendering: auto;
+    }
+
+    /* Optional: subtle focus outline for accessibility when image is focused */
+    .hero:focus {
+      outline: 2px solid #5bf;
+      outline-offset: 4px;
+    }
+  </style>
+  <link rel="preload" as="image" href="index_main.png">
+</head>
+<body>
+  <main class="page">
+    <img src="index_main.png" alt="Casper Spirit Dimensions promotional image" class="hero" tabindex="0">
+  </main>
+</body>
+</html>
